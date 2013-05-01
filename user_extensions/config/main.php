@@ -67,10 +67,16 @@
 									),
 
 				'modules'	=>	array(
+									//SYSTEM MODULES SECTION
 									'admin',
 									'auth',
 									'blog',
 									'pages',
+
+									//USER MODULES SECTION
+									'test'	=>	array(
+													'class'	=>	'user_modules.test.TestModule',
+												),
 
 									//....
 									//MORE MODULES PLACE HERE!
