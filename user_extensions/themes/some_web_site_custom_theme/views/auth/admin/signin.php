@@ -19,7 +19,7 @@
 		}
 
 		.form-signin {
-			max-width: 300px;
+			max-width: 400px;
 			padding: 19px 29px 29px;
 			margin: 0 auto 20px;
 			background-color: #fff;
@@ -70,17 +70,21 @@
 														));
 		?>
 
-			<h2 class="form-signin-heading">Please sign in</h2>
-			
+			<h2 class="form-signin-heading">Administrator sign in</h2>
+
 		<?php
 			if(CHtml::errorSummary($model, '') != '') {
 		?>
-			
+			<div class="alert alert-error">
+				<button data-dismiss="alert" class="close" type="button">×</button>
+				<?php echo CHtml::errorSummary($model, '', '')?>
+			</div>
 		<?php
 			}
+
+			echo $form->textField($model, 'username', array('class' => "input-block-level", 'placeholder' => "Username or Email address", ));
+			echo $form->passwordField($model, 'password', array('class' => "input-block-level", 'placeholder' => "Password", ));
 		?>
-			<input type="text" class="input-block-level" placeholder="Username or Email address">
-			<input type="password" class="input-block-level" placeholder="Password">
 			<!--
 			<label class="checkbox">
 				<input type="checkbox" value="remember-me"> Remember me
