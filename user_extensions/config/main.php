@@ -72,6 +72,7 @@
 									'auth',
 									'blog',
 									'pages',
+									'users',
 
 									//USER MODULES SECTION
 									'test'	=>	array(
